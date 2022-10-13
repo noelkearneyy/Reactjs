@@ -98,12 +98,45 @@
     
  ## Layout 
   ### Breakpoints
-    - Breakpoints are cutomisable widths that determin how your responsive layout behaves.
+   - Breakpoints are cutomisable widths that determin how your responsive layout behaves.
   ### Grid System
-    - Bootstrap's grid system uses containers, rows and columns to layout and align content.
-    - It is built using flexbox and is fully responsive. Flexbox Basics - https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
-    #### Container
-    
+   - Bootstrap's grid system uses containers, rows and columns to layout and align content.
+   - It is built using flexbox and is fully responsive. Flexbox Basics - https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
+  
+  #### Container
+  - Containers provide a way to center and horizontally pad your site's conteents. Use `Container` for a responsive pixel width.
+   ```
+    <Container>
+      <Row>
+        <Col>1 of 1</Col>
+      </Row>
+    </Container>
+   ```
+  - `<Container fluid />` for width 100% across all viewport and devices.
+  - You can set breakpoints with the `fluid` prop. Setting it to a breakpoint (sm, md, lg, xl, xxl) will set the Container as fluid until the specified breakpoint.
+   ```
+    <Container fluid="md">
+      <Row>
+        <Col>1 of 1</Col>
+      </Row>
+    </Container>
+   ```
+  #### Col
+   - Auto-layout columns; when no column widths are specified `Col` component will render equal width columns. 
+   ```
+    <Container>
+      <Row>
+        <Col>1 of 2</Col>
+        <Col>2 of 2</Col>
+      </Row>
+      <Row>
+        <Col>1 of 3</Col>
+        <Col>2 of 3</Col>
+        <Col>3 of 3</Col>
+      </Row>
+    </Container>
+   ```
+   - Setting one column width; 
     
  
  ## Bootstrap-React Layout - https://www.youtube.com/watch?v=RaFN1KU6cDU
